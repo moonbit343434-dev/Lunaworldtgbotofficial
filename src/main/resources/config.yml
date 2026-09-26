@@ -1,0 +1,57 @@
+# ╔══════════════════════════════════════╗
+# ║        LunaTGBot  config.yml         ║
+# ╚══════════════════════════════════════╝
+
+# Токен Telegram бота (получи у @BotFather)
+bot-token: "YOUR_BOT_TOKEN_HERE"
+
+# Username бота без @ (показывается игрокам)
+bot-username: "your_bot"
+
+# ── Награды (5 вариантов с шансами) ───────────────────────────────────────
+# chance — вес шанса (чем больше число тем чаще выпадает)
+# amount — сколько валюты выдать
+rewards:
+  - chance: 40
+    amount: 500
+  - chance: 25
+    amount: 899
+  - chance: 20
+    amount: 1000
+  - chance: 10
+    amount: 1400
+  - chance: 5
+    amount: 5000
+
+# ── Настройки ──────────────────────────────────────────────────────────────
+settings:
+  # Название валюты
+  currency-name: "монет"
+  # Время жизни кода в секундах (600 = 10 минут)
+  code-expire: 600
+
+# ── Сообщения ──────────────────────────────────────────────────────────────
+messages:
+  prefix: "&8[&b🌙 Luna&8] &r"
+
+  link-code: "&aТвой код привязки: &e&l{code}"
+  link-instruction: "&7Отправь код боту &b@{bot} &7в Telegram. Действует &e10 минут&7."
+  already-linked: "&eАккаунт уже привязан к Telegram. Используй /tgunlink чтобы отвязать."
+  not-linked: "&cТвой аккаунт не привязан к Telegram."
+  linked-ingame: "&aТелеграм успешно привязан! Награда: &e{amount} {currency} &7(выпало из {total} вариантов)"
+  unlinked: "&aТвой Telegram аккаунт успешно отвязан."
+  reload: "&aКонфиг успешно перезагружен."
+  no-permission: "&cНет доступа."
+  player-only: "&cТолько игроки могут использовать эту команду."
+  player-not-found: "&cИгрок &e{player} &cне найден."
+  give-success: "&aВыдано &e{amount} {currency} &aигроку &e{player}&a."
+  give-received: "&aАдминистратор выдал тебе &e{amount} {currency}&a."
+
+  # Сообщения Telegram бота
+  tg-start: "👋 Привет, {name}!\n\nЯ бот Minecraft сервера.\nЧтобы привязать аккаунт:\n1. Зайди на сервер\n2. Напиши /tglink\n3. Отправь мне полученный код"
+  tg-linked: "✅ Аккаунт {player} успешно привязан!\n💰 Награда: {amount} {currency}"
+  tg-invalid-code: "❌ Код недействителен или устарел.\nПолучи новый командой /tglink на сервере."
+  tg-already-linked: "⚠️ Этот Telegram уже привязан к аккаунту {player}."
+  tg-info-linked: "✅ Привязан к аккаунту: {player}"
+  tg-info-not-linked: "❌ Твой Telegram не привязан ни к одному аккаунту."
+  tg-unknown: "❓ Отправь 6-значный код для привязки аккаунта.\nКод можно получить командой /tglink на сервере."

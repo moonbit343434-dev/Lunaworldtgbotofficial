@@ -1,0 +1,46 @@
+name: LunaTGBot
+version: 1.0.0
+main: com.lunatgbot.plugin.LunaTGBot
+api-version: '1.21'
+author: Luna
+description: Привязка Telegram аккаунта к Minecraft с выдачей награды
+depend: [Vault]
+
+commands:
+  tglink:
+    description: Привязать Telegram аккаунт
+    usage: /tglink
+    permission: lunatgbot.use
+
+  tgunlink:
+    description: Отвязать Telegram аккаунт
+    usage: /tgunlink
+    permission: lunatgbot.use
+
+  tgreload:
+    description: Перезагрузить конфиг
+    usage: /tgreload
+    permission: lunatgbot.admin
+
+  tggive:
+    description: Выдать валюту игроку
+    usage: /tggive <ник> <сумма>
+    permission: lunatgbot.admin
+
+  tgcheck:
+    description: Проверить привязку игрока
+    usage: /tgcheck <ник>
+    permission: lunatgbot.admin
+
+  tgunlinkadmin:
+    description: Отвязать аккаунт игрока (admin)
+    usage: /tgunlinkadmin <ник>
+    permission: lunatgbot.admin
+
+permissions:
+  lunatgbot.use:
+    description: Использование команд привязки
+    default: true
+  lunatgbot.admin:
+    description: Административные команды
+    default: op
